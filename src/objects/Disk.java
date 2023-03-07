@@ -7,16 +7,22 @@ public class Disk {
         this.size=size;
         texture=createTexture(size);
     }
+    public int getSize(){
+        return size;
+    }
     public String createTexture(int size){
         StringBuilder str= new StringBuilder();
-        for (int i = 0; i < 10-size; i++) {
+        for (int i = 0; i < (10-size)/2; i++) {
             str.append(" ");
         }
         str.append("[");
         for (int i=0;i<size; i++){
-            str.append("=");
+            str.append(size);
         }
         str.append("]");
+        for (int i = 0; i < (10-size)/2; i++) {
+            str.append(" ");
+        }
         return str.toString();
     }
 
